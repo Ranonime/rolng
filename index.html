@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hadiah Untukmu!</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            cursor: pointer;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .box {
+            font-size: 5rem;
+            animation: bounce 1s infinite alternate;
+        }
+
+        @keyframes bounce {
+            from {
+                transform: translateY(0);
+            }
+
+            to {
+                transform: translateY(-20px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Ganti link audio di bawah ini dengan file .mp3 atau .wav Anda -->
+    <audio id="suaraKejutan" src="audiomass-output.mp3"></audio>
+
+    <div class="container" onclick="mulaiPrank()">
+        <h1>Ketuk Kotak untuk Membuka Hadiah! 🎁</h1>
+        <div class="box">📦</div>
+    </div>
+
+    <script>
+
+        function mulaiPrank() {
+            var audio = document.getElementById("suaraKejutan");
+
+            // Memutar suara yang sudah di-boost volumenya
+            audio.play();
+
+            // Memunculkan rentetan pesan yang membuat target panik dan sibuk menekan OK
+            setTimeout(function () {
+                alert("⚠️ WARNING: SYSTEM ERROR! ⚠️");
+                alert("Mengunduh virus... 10%");
+                alert("Mengunduh virus... 50%");
+                alert("Mengunduh virus... 99%");
+                alert("Awokwokwow");
+                alert("Awokwokwow");
+                alert("Awokwokwow");
+                alert("Awokwokwow");
+                alert("Awokwokwow");
+                alert("Awokwokwow");
+            }, 100);
+        }
+
+
+    </script>
+
+</body>
+
+</html>
